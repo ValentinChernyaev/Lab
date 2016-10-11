@@ -2,9 +2,6 @@
 import matplotlib.pyplot as plt
 import random
 
-b=3
-a=-3
-N=1000
 g=0.0
 Integral=0.0
 fx=0.0
@@ -14,8 +11,8 @@ yi=[]
 
 random.seed(0)
 
-a=-2
-b=2
+a=-2 # реальный интервал от -2 до 2..
+b=2  # в задаче зачем-то от -3 до 3
 N=1000000
 
 
