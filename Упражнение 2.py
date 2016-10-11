@@ -1,4 +1,4 @@
-﻿
+﻿# http://www.cyberforum.ru/turbo-pascal/thread1294897.html
 import matplotlib.pyplot as plt
 import random
 
@@ -14,36 +14,38 @@ yi=[]
 
 random.seed(0)
 
-a=-3
-b=3
-N=1000
+a=-2
+b=2
+N=1000000
 
 
-k=b-a
+k=b-a # Переменной"k"присвоим значение длины промежутка интегрирования}
 
 for i in range (N):
+    #проведем N испытаний
+  g=random.random() # g - случайная величина из промежутка [0;1]}
 
-  g=random.random()
+  x= a + g*(b-a) # произвольная величина из [a; b] }
+ # print(g,x)
 
-  x= a + g*(b-a)
-
-  if x>=-2.0 or x<= 2.0:
+  if x>=-2.0 or x<= 2.0:  # Вычисляем функцию
             fx1=-x**2+4
   else:
     fx1=0
 
   yi.append(fx1)
   xi.append(x)
-
+  #print (fx1, x)
 
   fx=fx+fx1
 
 
 Integral=(1/N)*k*fx
+print ("Количество случайных значений u=", N)
 print('Интеграл=',Integral)
+# Построить точки
+#plt.scatter(xi, yi)
 
-plt.scatter(xi, yi)
-
-
-plt.show()
+#plt.plot(xi, yi)
+#plt.show()
 
